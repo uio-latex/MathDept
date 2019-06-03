@@ -1,6 +1,6 @@
 % Official presentation theme for The Department of Mathematics
 % Implemented by Martin Helsø (martibhe@math.uio.no)
-% Version 26-11-2018
+% Version 03-06-2019
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,6 +76,12 @@
 }
 
 
+%% Logo on ordinary slides
+\providebool{logo}
+\DeclareOptionBeamer{Logo}  { \setbool{logo}{true} }
+\DeclareOptionBeamer{NoLogo}{ \setbool{logo}{false} }
+
+
 %% Automatic first and last frame:
 \DeclareOptionBeamer{TitlePage} { \def \MATHfirstframe {\TitlePage}  }
 \DeclareOptionBeamer{FinalFrame}{ \def \MATHlastframe  {\FinalFrame} }
@@ -87,6 +93,7 @@
 \ExecuteOptionsBeamer{t}
 \ExecuteOptionsBeamer{unnumbered}
 \ExecuteOptionsBeamer{SansSerif}
+\ExecuteOptionsBeamer{Logo}
 \ExecuteOptionsBeamer{TitlePage}
 \ExecuteOptionsBeamer{FinalFrame}
 \ProcessOptionsBeamer
@@ -382,19 +389,23 @@
 
 \setbeamertemplate{headline}
 {
-    \AddToShipoutPictureFG*
+    \ifbool{logo}
     {
-        \AtPageUpperLeft
+        \AddToShipoutPictureFG*
         {
-            \hspace{2.1 mm}
-            \parbox[t][0.9 cm][b]{\textwidth}
+            \AtPageUpperLeft
             {
-                \includegraphics[scale = 0.2]
-                {MathDept-images/MathDept-logo-2-\MATHlang}
+                \hspace{2.1 mm}
+                \parbox[t][0.9 cm][b]{\textwidth}
+                {
+                    \includegraphics[scale = 0.2]
+                    {MathDept-images/MathDept-logo-2-\MATHlang}
+                }
             }
         }
+        \vspace*{11mm}
     }
-    \vspace*{11mm}
+    { \vspace*{1.7 mm} }
 }
 
 
