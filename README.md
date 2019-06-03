@@ -13,6 +13,9 @@ By default, almost all text is typeset in a sans serif. The option `MathSerif` e
 ### Numbered environments
 By default, the environments listed below are unnumbered. The option `numbered` adds numbers, whereas `AMS` adds numbers and typesets the environment names in the style of the American Mathematical Society.
 
+### Logo
+Remove the logo from ordinary frames using the option `NoLogo`.
+
 ### Title frame and final frame
 Presentations automatically start with a title frame and a closing frame. Either one of them can be disabled with the options `NoTitlePage` or `NoFinalFrame`.
 
