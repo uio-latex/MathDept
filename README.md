@@ -1,6 +1,21 @@
 # MathDept
 Beamer theme for the Department of Mathematics at the University of Oslo
 
+Available on [Overleaf](https://www.overleaf.com/latex/templates/uio-math-department-beamer-theme/zywjpxdgmpzf).
+
+![Image of first slide](https://i.imgur.com/ckfzelX.png)
+
+## Section page
+The command `\SectionPage` inserts a `[NoFrameNumbering, plain]` frame
+with grey background issuing the `\sectionpage` command.
+The command `\SectionPage` is used outside of a `frame`,
+unlike `\sectionpage`. 
+
+## Enumerated references
+The command `\enumref` inserts a reference to an enumerated item
+in the shape of a grey box,
+like the ones used in the `enumerate` environment.
+
 ## Options
 Options are given as
 ```LaTeX
@@ -8,16 +23,23 @@ Options are given as
 ```
 
 ### Font
-By default, almost all text is typeset in a sans serif. The option `MathSerif` enables serifs for mathematical symbols, whereas `Serif` enables serifs for all text.
+By default, almost all text is typeset in a sans serif.
+The option `MathSerif` enables serifs for mathematical symbols,
+whereas `Serif` enables serifs for all text.
 
 ### Numbered environments
-By default, the environments listed below are unnumbered. The option `numbered` adds numbers, whereas `AMS` adds numbers and typesets the environment names in the style of the American Mathematical Society.
+By default,
+the environments listed below are unnumbered.
+The option `numbered` adds numbers,
+whereas `AMS` adds numbers and typesets the environment names
+in the style of the American Mathematical Society.
 
 ### Logo
 Remove the logo from ordinary frames using the option `NoLogo`.
 
 ### Title frame and final frame
-Presentations automatically start with a title frame and a closing frame. Either one of them can be disabled with the options `NoTitlePage` or `NoFinalFrame`.
+Presentations automatically start with a title frame and a closing frame.
+Either one of them can be disabled with the options `NoTitlePage` or `NoFinalFrame`.
 
 ### Language
 If one of the options
@@ -28,7 +50,8 @@ If one of the options
 * `norsk`
 * `nynorsk`
 
-are given, the environments listed below are translated into the specified language.
+are given,
+the environments listed below are translated into the specified language.
 
 ## Environments
 An _environment_ is initialized with
@@ -61,13 +84,3 @@ In addition, `MathDept` defines these environments:
 * `property`
 * `remark`
 * `remarks`
-
-## Dependencies
-`MathDept` imports the following packages:
-* `calc`
-* `eso-pic`
-* `etoolbox`
-* `fontenc`
-* `gfsneohellenic`
-* `thmtools`
-* `tikz`
